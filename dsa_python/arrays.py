@@ -29,3 +29,13 @@ def contains_duplicate(self, nums):
             Set.add(i) #Updates the Set
 
     return False
+
+# ----------------------------
+# Problem 3: Squares of Sorted Array
+# ----------------------------
+
+def sortedSquares(self, nums):
+    a=[i*i for i in nums]
+    a.sort()
+    return a
+
