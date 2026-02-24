@@ -39,3 +39,28 @@ def sortedSquares(self, nums):
     a.sort()
     return a
 
+
+# ----------------------------
+# Problem 4: Remove Duplicates from Sorted Array
+# ----------------------------
+
+def remDuplicates(self, nums):
+    j=0
+    for i in range(1,len(nums)):
+        if nums[j] != nums[i]:
+            j += 1
+            nums[j] = nums[i]
+    return j+1
+
+
+# ----------------------------
+# Problem 5: MOve Zeroes
+# ----------------------------
+
+def movezeroes(self, nums):
+    nonzero, i = 0,0
+    while i < len(nums):
+        if nums[i] != 0:
+            nums[i], nums[nonzero] = nums[nonzero], nums[i]
+            nonzero += 1
+        i += 1
